@@ -10,6 +10,12 @@ class Zubar extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime',
+        'prezime',
+        'kategorija',
+    ];
+
     public function rezervacije(){
         return $this->hasMany(Rezervacija::class);
     }
